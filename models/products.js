@@ -1,6 +1,29 @@
 const { default: mongoose, Schema } = require("mongoose");
 
 const productSchema = new Schema({
+    owner: {
+        type: Schema.Types.ObjectId,
+        ref: 'users'
+    },
+    category: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Category',
+        required: [true, 'Product category is required'],
+    },
+    gender: {
+        type: String,
+        enum: ['Male', 'Female', 'Children'],
+        required: true
+    },
+    mainCategory: {
+        type: String,
+        enum: ['Clothing', 'Accessories', 'Footwear'],
+        required: true
+    },
+    subCategory: {
+        type: String,
+        required: true
+    },
     name: {
         type: String,
         required: [true, 'Product name is required'],
@@ -18,12 +41,14 @@ const productSchema = new Schema({
         ref: 'Category',
         required: [true, 'Product category is required'],
     },
-    images: [String],
-    sizes: [String],
+    size: {
+        type: String,
+        enum: ['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl']
+    },
     colors: [String],
     stock: {
         type: Number,
-        default: 0,
+        default: 1,
     },
     dateAdded: {
         type: Date,

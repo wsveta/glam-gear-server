@@ -10,18 +10,19 @@ const { addNewProduct,
 
 const productsRouter = express.Router();
 
-productsRouter.post('/products', authMiddleware, addNewProduct);
+// Маршрути зі статичними шляхами
+productsRouter.get('/search', getProductsByQuery);  // Раніше було productsRouter.get('/search?q=query', getProductsByQuery);
+productsRouter.get('/sort', sortProducts);  // Раніше було productsRouter.get('/sort?criteria=sortBy', sortProducts);
 
-productsRouter.delete('/products/:productId', authMiddleware, deleteProduct);
+// Додаємо новий продукт
+productsRouter.post('/', authMiddleware, addNewProduct);
 
-productsRouter.get('/products', getProducts);
+// Отримання всіх продуктів
+productsRouter.get('/', getProducts);
 
-productsRouter.get('/products/:productId', getProductById);
-
-productsRouter.put('/products/:productId', authMiddleware, updateProduct);
-
-productsRouter.get('/products/search?q=query', getProductsByQuery);
-
-productsRouter.get('/products/sort?criteria=sortBy', sortProducts);
+// Маршрути з динамічними сегментами
+productsRouter.get('/:productId', getProductById);
+productsRouter.put('/:productId', authMiddleware, updateProduct);
+productsRouter.delete('/:productId', authMiddleware, deleteProduct);
 
 module.exports = productsRouter;

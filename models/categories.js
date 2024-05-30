@@ -1,14 +1,30 @@
-const { default: mongoose, Schema } = require("mongoose");
+const mongoose = require('mongoose');
 
-const categorySchema = new Schema({
-    name: {
+const subCategorySchema = new mongoose.Schema({
+    subCategory: {
         type: String,
-        required: [true, 'Category name is required'],
-        unique: true,
+        required: true
     },
-    description: String
 }, { versionKey: false });
 
-const Category = mongoose.model('Category', categorySchema);
+const mainCategorySchema = new mongoose.Schema({
+    mainCategory: {
+        type: String,
+        enum: ['Clothing', 'Footwear', 'Accessories'],
+        required: true
+    },
+    subCategory: [subCategorySchema]
+}, { versionKey: false });
+
+const typeSchema = new mongoose.Schema({
+    gender: {
+        type: String,
+        enum: ['Male', 'Female', 'Children'],
+        required: true
+    },
+    mainCategory: [mainCategorySchema]
+}, { versionKey: false });
+
+const Category = mongoose.model('Category', typeSchema);
 
 module.exports = Category;

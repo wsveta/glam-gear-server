@@ -1,0 +1,367 @@
+[
+    {
+        "gender": "Male",
+        "mainCategory": "Clothing",
+        "subCategory": "T-shirts"
+    },
+    {
+        "gender": "Male",
+        "mainCategory": "Clothing",
+        "subCategory": "Shirts"
+    },
+    {
+        "gender": "Male",
+        "mainCategory": "Clothing",
+        "subCategory": "Jeans"
+    },
+    {
+        "gender": "Male",
+        "mainCategory": "Clothing",
+        "subCategory": "Trousers"
+    },
+    {
+        "gender": "Male",
+        "mainCategory": "Clothing",
+        "subCategory": "Shorts"
+    },
+    {
+        "gender": "Male",
+        "mainCategory": "Clothing",
+        "subCategory": "Suits"
+    },
+    {
+        "gender": "Male",
+        "mainCategory": "Clothing",
+        "subCategory": "Jackets"
+    },
+    {
+        "gender": "Male",
+        "mainCategory": "Clothing",
+        "subCategory": "Coats"
+    },
+    {
+        "gender": "Male",
+        "mainCategory": "Clothing",
+        "subCategory": "Sportswear"
+    },
+    {
+        "gender": "Male",
+        "mainCategory": "Clothing",
+        "subCategory": "Formalwear"
+    },
+    {
+        "gender": "Male",
+        "mainCategory": "Footwear",
+        "subCategory": "Sneakers"
+    },
+    {
+        "gender": "Male",
+        "mainCategory": "Footwear",
+        "subCategory": "Boots"
+    },
+    {
+        "gender": "Male",
+        "mainCategory": "Footwear",
+        "subCategory": "Loafers"
+    },
+    {
+        "gender": "Male",
+        "mainCategory": "Footwear",
+        "subCategory": "Dress Shoes"
+    },
+    {
+        "gender": "Male",
+        "mainCategory": "Footwear",
+        "subCategory": "Sandals"
+    },
+    {
+        "gender": "Male",
+        "mainCategory": "Footwear",
+        "subCategory": "Slippers"
+    },
+    {
+        "gender": "Male",
+        "mainCategory": "Footwear",
+        "subCategory": "Flip Flops"
+    },
+    {
+        "gender": "Female",
+        "mainCategory": "Footwear",
+        "subCategory": "Heels"
+    },
+    {
+        "gender": "Female",
+        "mainCategory": "Footwear",
+        "subCategory": "Flats"
+    },
+    {
+        "gender": "Female",
+        "mainCategory": "Footwear",
+        "subCategory": "Sandals"
+    },
+    {
+        "gender": "Female",
+        "mainCategory": "Footwear",
+        "subCategory": "Boots"
+    },
+    {
+        "gender": "Female",
+        "mainCategory": "Footwear",
+        "subCategory": "Sneakers"
+    },
+    {
+        "gender": "Female",
+        "mainCategory": "Footwear",
+        "subCategory": "Wedges"
+    },
+    {
+        "gender": "Female",
+        "mainCategory": "Footwear",
+        "subCategory": "Espadrilles"
+    },
+    {
+        "gender": "Female",
+        "mainCategory": "Footwear",
+        "subCategory": "Mules"
+    },
+    {
+        "gender": "Female",
+        "mainCategory": "Clothing",
+        "subCategory": "Dresses"
+    },
+    {
+        "gender": "Female",
+        "mainCategory": "Clothing",
+        "subCategory": "Tops"
+    },
+    {
+        "gender": "Female",
+        "mainCategory": "Clothing",
+        "subCategory": "Blouses"
+    },
+    {
+        "gender": "Female",
+        "mainCategory": "Clothing",
+        "subCategory": "Skirts"
+    },
+    {
+        "gender": "Female",
+        "mainCategory": "Clothing",
+        "subCategory": "Pants"
+    },
+    {
+        "gender": "Female",
+        "mainCategory": "Clothing",
+        "subCategory": "Jeans"
+    },
+    {
+        "gender": "Female",
+        "mainCategory": "Clothing",
+        "subCategory": "Shorts"
+    },
+    {
+        "gender": "Female",
+        "mainCategory": "Clothing",
+        "subCategory": "Jumpsuits"
+    },
+    {
+        "gender": "Female",
+        "mainCategory": "Clothing",
+        "subCategory": "Suits"
+    },
+    {
+        "gender": "Female",
+        "mainCategory": "Clothing",
+        "subCategory": "Outerwear"
+    },
+    {
+        "gender": "Female",
+        "mainCategory": "Clothing",
+        "subCategory": "Activewear"
+    },
+    {
+        "gender": "Female",
+        "mainCategory": "Clothing",
+        "subCategory": "Swimwear"
+    },
+    {
+        "gender": "Female",
+        "mainCategory": "Clothing",
+        "subCategory": "Lingerie"
+    },
+    {
+        "gender": "Female",
+        "mainCategory": "Clothing",
+        "subCategory": "Sleepwear"
+    },
+    {
+        "gender": "Neutral",
+        "mainCategory": "Accessories",
+        "subCategory": "Bags"
+    },
+    {
+        "gender": "Neutral",
+        "mainCategory": "Accessories",
+        "subCategory": "Wallets"
+    },
+    {
+        "gender": "Neutral",
+        "mainCategory": "Accessories",
+        "subCategory": "Belts"
+    },
+    {
+        "gender": "Neutral",
+        "mainCategory": "Accessories",
+        "subCategory": "Hats"
+    },
+    {
+        "gender": "Neutral",
+        "mainCategory": "Accessories",
+        "subCategory": "Scarves"
+    },
+    {
+        "gender": "Neutral",
+        "mainCategory": "Accessories",
+        "subCategory": "Gloves"
+    },
+    {
+        "gender": "Neutral",
+        "mainCategory": "Accessories",
+        "subCategory": "Jewelry"
+    },
+    {
+        "gender": "Neutral",
+        "mainCategory": "Accessories",
+        "subCategory": "Watches"
+    },
+    {
+        "gender": "Neutral",
+        "mainCategory": "Accessories",
+        "subCategory": "Sunglasses"
+    },
+    {
+        "gender": "Neutral",
+        "mainCategory": "Accessories",
+        "subCategory": "Hair Accessories"
+    },
+    {
+        "gender": "Neutral",
+        "mainCategory": "Accessories",
+        "subCategory": "Ties"
+    },
+    {
+        "gender": "Neutral",
+        "mainCategory": "Accessories",
+        "subCategory": "Bow Ties"
+    },
+    {
+        "gender": "Neutral",
+        "mainCategory": "Accessories",
+        "subCategory": "Pocket Squares"
+    },
+    {
+        "gender": "Neutral",
+        "mainCategory": "Accessories",
+        "subCategory": "Umbrellas"
+    },
+    {
+        "gender": "Children",
+        "mainCategory": "Clothing",
+        "subCategory": "T-shirts"
+    },
+    {
+        "gender": "Children",
+        "mainCategory": "Clothing",
+        "subCategory": "Shirts"
+    },
+    {
+        "gender": "Children",
+        "mainCategory": "Clothing",
+        "subCategory": "Tops"
+    },
+    {
+        "gender": "Children",
+        "mainCategory": "Clothing",
+        "subCategory": "Blouses"
+    },
+    {
+        "gender": "Children",
+        "mainCategory": "Clothing",
+        "subCategory": "Dresses"
+    },
+    {
+        "gender": "Children",
+        "mainCategory": "Clothing",
+        "subCategory": "Skirts"
+    },
+    {
+        "gender": "Children",
+        "mainCategory": "Clothing",
+        "subCategory": "Pants"
+    },
+    {
+        "gender": "Children",
+        "mainCategory": "Clothing",
+        "subCategory": "Jeans"
+    },
+    {
+        "gender": "Children",
+        "mainCategory": "Clothing",
+        "subCategory": "Shorts"
+    },
+    {
+        "gender": "Children",
+        "mainCategory": "Clothing",
+        "subCategory": "Jumpsuits"
+    },
+    {
+        "gender": "Children",
+        "mainCategory": "Clothing",
+        "subCategory": "Suits"
+    },
+    {
+        "gender": "Children",
+        "mainCategory": "Clothing",
+        "subCategory": "Outerwear"
+    },
+    {
+        "gender": "Children",
+        "mainCategory": "Clothing",
+        "subCategory": "Activewear"
+    },
+    {
+        "gender": "Children",
+        "mainCategory": "Clothing",
+        "subCategory": "Swimwear"
+    },
+    {
+        "gender": "Children",
+        "mainCategory": "Clothing",
+        "subCategory": "Sleepwear"
+    },
+    {
+        "gender": "Children",
+        "mainCategory": "Footwear",
+        "subCategory": "Sneakers"
+    },
+    {
+        "gender": "Children",
+        "mainCategory": "Footwear",
+        "subCategory": "Boots"
+    },
+    {
+        "gender": "Children",
+        "mainCategory": "Footwear",
+        "subCategory": "Sandals"
+    },
+    {
+        "gender": "Children",
+        "mainCategory": "Footwear",
+        "subCategory": "Slippers"
+    },
+    {
+        "gender": "Children",
+        "mainCategory": "Footwear",
+        "subCategory": "Flip Flops"
+    }
+]

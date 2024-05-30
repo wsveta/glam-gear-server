@@ -1,14 +1,17 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const morgan = require('morgan');
 const cors = require('cors');
+const authMiddleware = require('./middlewares/authMiddleware.js');
 const usersRouter = require('./routes/usersRouter.js');
 const productsRouter = require('./routes/productsRouter.js');
 const cartRouter = require('./routes/cartRouter.js');
-const authMiddleware = require('./middlewares/authMiddleware.js');
 require('dotenv').config();
 
 const app = express();
 const PORT = 5000;
+
+app.use(morgan("tiny"));
 app.use(cors());
 app.use(express.json());
 

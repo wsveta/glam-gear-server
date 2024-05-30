@@ -2,7 +2,7 @@ const User = require('../models/users.js')
 const bcrypt = require('bcrypt');
 const nodemailer = require('nodemailer');
 const { v4 } = require('uuid');
-const { userRegisterSchema, userLoginSchema } = require('../schemas/userSchemas.js');
+const { userRegisterSchema, userLoginSchema, emailSchema } = require('../schemas/userSchemas.js');
 const jwt = require('jsonwebtoken');
 require("dotenv").config();
 
@@ -111,10 +111,10 @@ const loginUser = async (req, res, next) => {
     const { password, email } = req.body;
 
     try {
-        await userLoginSchema.validateAsync({ password, email });
-
         const processedPas = password.trim();
         const processedEmail = email.toLowerCase().trim();
+        await userLoginSchema.validateAsync({ password: processedPas, email: processedEmail });
+        const user = await User.findOne({ email: processedEmail });
 
         if (user === null) {
             return res.status(401).send({ "message": "Email or password is wrong" })
@@ -130,20 +130,30 @@ const loginUser = async (req, res, next) => {
             return res.status(401).send({ message: "Your account is not verified yet" });
         }
 
-        const token = jwt.sign({ id: user._id, name: user.name, email: user.email }, process.env.SECRET_KEY, { expiresIn: "1h" });
+        const token = jwt.sign({ id: user._id, name: user.name, email: processedEmail }, process.env.SECRET_KEY, { expiresIn: "1h" });
 
-        await User.findByIdAndUpdate(user._id, { token });
+        await User.findByIdAndUpdate({ _id: user._id }, {token} );
 
-        res.status(200).send({ token, user: { email: user.email } });
+        res.status(200).send({ token, user: { email: processedEmail } });
 
     } catch (error) {
         res.send({ message: error.message });
     }
 }
 
+const logoutUser = async (req, res, next) => {
+    try {
+        await User.findByIdAndUpdate({ _id: req.user.id }, { token: null });
+        res.status(204).end();
+    } catch (error) {
+        res.status(401).send({ message: error.message });
+    }
+}
+
 module.exports = {
     registerUser,
+    loginUser,
+    logoutUser,
     verifyUser,
-    resendVerificationEmail,
-    loginUser
+    resendVerificationEmail
 };
