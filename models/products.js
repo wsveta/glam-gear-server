@@ -1,9 +1,11 @@
 const { default: mongoose, Schema } = require("mongoose");
+const Category = require('./categories');
+const User = require('./users');
 
 const productSchema = new Schema({
     owner: {
         type: Schema.Types.ObjectId,
-        ref: 'users'
+        ref: 'User'
     },
     category: {
         type: mongoose.Schema.Types.ObjectId,
@@ -36,14 +38,8 @@ const productSchema = new Schema({
         type: Number,
         required: [true, 'Product price is required'],
     },
-    category: {
-        type: Schema.Types.ObjectId,
-        ref: 'Category',
-        required: [true, 'Product category is required'],
-    },
     size: {
         type: String,
-        enum: ['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl']
     },
     colors: [String],
     stock: {

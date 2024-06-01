@@ -18,9 +18,19 @@ const addNewProduct = async (req, res, next) => {
             return res.status(404).send({ message: "Category doesn't exist" })
         }
 
-        const mc = category.mainCategory.find(mc => mc.mainCategory === mainCategory).subCategory.find(sc => sc.subCategory === subCategory);
+        const mc = category.mainCategory.find(mc => mc.mainCategory === mainCategory);
 
-        const newProduct = await Product.create({ ...product, owner: req.user.id, category: mc._id })
+        if (!mc) {
+            return res.status(404).send({ message: "Main category doesn't exist" })
+        }
+
+        const sc = mc.subCategory.find(sc => sc.subCategory === subCategory);
+
+        if (!sc) {
+            return res.status(404).send({ message: "Sub category doesn't exist" })
+        }
+
+        const newProduct = await Product.create({ ...product, owner: req.user.id, category: sc._id })
 
         res.status(200).send(newProduct);
     } catch (error) {
@@ -78,7 +88,31 @@ const updateProduct = async (req, res, next) => {
 }
 
 const sortProducts = async (req, res, next) => {
-    
+    try {
+        const criteria = req.query.by;
+        let sortOptions;
+
+        switch (criteria) {
+            case 'newest':
+                sortOptions = { dateAdded: -1 }; // Сортувати за датою створення, найновіші першими
+                break;
+            case 'oldest':
+                sortOptions = { dateAdded: 1 }; // Сортувати за датою створення, найстаріші першими
+                break;
+            case 'expensive':
+                sortOptions = { price: -1 }; // Сортувати за ціною, найдорожчі першими
+                break;
+            case 'cheap':
+                sortOptions = { price: 1 }; // Сортувати за ціною, найдешевші першими
+                break;
+            default:
+                sortOptions = {}; // За замовчуванням без сортування
+        }
+        const products = await Product.find({}).sort(sortOptions);
+        res.status(200).send(products);
+    } catch (error) {
+        res.status(400).send({ message: error.message });
+    }
  }
 
 const getProductsByQuery = async (req, res, next) => {
